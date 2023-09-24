@@ -96,57 +96,7 @@ main {
     flex-wrap: wrap;
 }
 
-#carousel {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-}
 
-.carousel-item {
-    display: none;
-    text-align: center;
-    padding: 20px;
-}
-
-.carousel-item img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Estilos para os botões de controle do carrossel */
-input[type="radio"] {
-    display: none;
-}
-
-label {
-    cursor: pointer;
-    padding: 5px;
-    background-color: #ff9900;
-    color: #fff;
-    border-radius: 50%;
-    margin: 0 5px;
-}
-
-#slide1:checked ~ .carousel-item:nth-child(1),
-#slide2:checked ~ .carousel-item:nth-child(2),
-#slide3:checked ~ .carousel-item:nth-child(3) {
-    display: block;
-}
-
-/* Animação do carrossel */
-#carousel {
-    animation: carousel 9s infinite;
-}
-
-@keyframes carousel {
-    25% { left: 0; }
-    35% { left: -100%; }
-    50% { left: -100%; }
-    60% { left: -200%; }
-    75% { left: -200%; }
-    85% { left: -300%; }
-    100% { left: -300%; }
-}
 
 #product-list li {
     background-color: #fff;
