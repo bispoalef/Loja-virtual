@@ -1,0 +1,9 @@
+/* Adicione esta classe ao seu arquivo styles.css */
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.visible {
+    display: block;
+    /* Adicione aqui os estilos para o item visível */
+}

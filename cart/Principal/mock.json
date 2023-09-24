@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "name": "Produto 1",
+        "description": "Descrição do Produto 1",
+        "price": 10.00,
+        "image": "../assets/camisa.webp"
+    },
+    {
+        "id": 2,
+        "name": "Produto 2",
+        "description": "Descrição do Produto 2",
+        "price": 15.00,
+        "image": "../assets/popfunco.webp"
+    },
+    {
+        "id": 3,
+        "name": "Produto 3",
+        "description": "Descrição do Produto 3",
+        "price": 20.00,
+        "image": "../assets/colar.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Produto 4",
+        "description": "Descrição do Produto 4",
+        "price": 30.00,
+        "image": "../assets/akumanomi.webp"
+    }
+    ,
+    {
+        "id": 5,
+        "name": "Produto 5",
+        "description": "Descrição do Produto 5",
+        "price": 40.00,
+        "image": "../assets/poster.webp"
+    }
+    ,
+    {
+        "id": 6,
+        "name": "Produto 6",
+        "description": "Descrição do Produto 6",
+        "price": 50.00,
+        "image": "../assets/tenis.webp"
+    }
+]

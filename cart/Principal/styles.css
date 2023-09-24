@@ -1,0 +1,189 @@
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Estilos para a barra de navegação */
+nav {
+    background-color: #444;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+}
+
+/* Estilos para a seção principal */
+main {
+    padding: 20px;
+}
+
+/* Estilos para o carrossel */
+#carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap; /* Impede a quebra de linha dentro do carrossel */
+}
+
+.carousel-item {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    scroll-snap-align: start; /* Alinha cada item do carrossel ao início */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+#carousel::-webkit-scrollbar {
+    height: 6px;
+}
+
+#carousel::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border-radius: 3px;
+}
+
+#carousel::-webkit-scrollbar-track {
+    background-color: #ddd;
+}
+
+/* Estilos para a lista de produtos */
+#product-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para os botões de controle do carrossel */
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    padding: 5px;
+    background-color: #ff9900;
+    color: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+#slide1:checked ~ .carousel-item:nth-child(1),
+#slide2:checked ~ .carousel-item:nth-child(2),
+#slide3:checked ~ .carousel-item:nth-child(3) {
+    display: block;
+}
+
+/* Animação do carrossel */
+#carousel {
+    animation: carousel 9s infinite;
+}
+
+@keyframes carousel {
+    25% { left: 0; }
+    35% { left: -100%; }
+    50% { left: -100%; }
+    60% { left: -200%; }
+    75% { left: -200%; }
+    85% { left: -300%; }
+    100% { left: -300%; }
+}
+
+#product-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#product-list h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#product-list p {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+}
+
+#product-list a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ff9900;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
