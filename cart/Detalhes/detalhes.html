@@ -12,20 +12,38 @@
         <h1>Detalhes do Produto 1</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="../Carrinho/carrinho.html"><img src="../assets/carrinho" alt="Carrinho de Compras" class="cart-icon"> Carrinho</a></li>
+    <nav class="navbar">
+        <ul> 
+             <li><a href="../Principal/principal.html">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
         </ul>
+        <a class="cart" href="../Carrinho/carrinho.html"><img src="../assets/carrinho" alt="Carrinho de Compras" class="cart-icon"></a>
     </nav>
 
     <main>
-        <h2>Produto 1</h2>
-        <p>Descrição do Produto 1</p>
-        <p>Preço: R$ 10,00</p>
-        <button>Adicionar ao Carrinho</button>
+        <div class="container-product">
+            
+            <img class="product-image" src="https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91vRaLF252L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX425_.png" alt="Imagem do produto">
+            <div class="product-info">
+                <h2>Produto 1</h2>
+                <p>Selecione o Tamanho</p>
+                <input type="radio" name="size" id="p">
+                <label for="size">P</label>
+                <input type="radio" name="size" id="m" checked>
+                <label for="size">M</label>
+                <input type="radio" name="size" id="g">
+                <label for="size">G</label>
 
-        <a href="../Principal/principal.html" class="home-button">Home</a>
+                <p>Preço: R$ 10,00</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            
+        </div>
+        <div class="product-description">
+            <h3>Descrição do Produto</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis numquam soluta reprehenderit dolores, similique animi ea laudantium esse eveniet perspiciatis, natus tenetur doloribus distinctio hic libero placeat qui. Perferendis!</p>
+        </div>
+
     </main>
 
     <footer>

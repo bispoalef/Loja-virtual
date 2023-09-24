@@ -83,3 +83,19 @@ footer {
     vertical-align: middle; 
     margin-right: 5px; 
 }
+
+.container-product {
+    display: flex;
+    align-items: center;
+}
+
+.product-image{
+    width: 50vh;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
+}
+
