@@ -93,7 +93,7 @@ footer {
     width: 50vh;
 }
 
-.navbar {
+nav.navbar {
     display: flex;
     align-items: center;   
     justify-content: center; 
