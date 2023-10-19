@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,85 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 
 </head>
+
 <body>
     <header>
         <h1>Seu Carrinho de Compras</h1>
     </header>
     <main>
-        <ul id="cart-items">
-            <li>
-                <h2>Produto 1</h2>
-                <p>Descrição do Produto 1</p>
-                <p>Preço: R$ 10,00</p>
-            </li>
-            <li>
-                <h2>Produto 2</h2>
-                <p>Descrição do Produto 2</p>
-                <p>Preço: R$ 15,00</p>
-            </li>
-        </ul>
+        <div class="cart_bar">
+            <div class="produtos">Produtos</div>
+            <div class="preçoUnitario">Preço Unitário</div>
+            <div class="quantidade">Quantidade</div>
+            <div class="preçoTotal">Preço Total</div>
+        </div>
+
+        <div class="cart_prod">
+            <div class="img">Imagem - Descrição </div>
+            <div class="prod1">Preço produto 1</div>
+            <div class="descr1">
+                <button onclick="increment()">+</button>
+                <h2 id="counting"></h2>
+                <button onclick="decrement()">-</button>
+
+            </div>
+            <div class="preço1">R$ 10,00</div>
+        </div>
+
+        <div class="cart_prod">
+            <div class="img">Imagem - Descrição </div>
+            <div class="prod1">Preço produto 2</div>
+            <div class="descr1">
+                <button onclick="increment2()">+</button>
+                <h2 id="counting2"></h2>
+                <button onclick="decrement2()">-</button>
+
+            </div>
+            <div class="preço1">R$ 20,00</div>
+        </div>
+
+        <script>
+            //initialising a variable name data
+            var data = 0;
+
+            //printing default value of data that is 0 in h2 tag
+            document.getElementById("counting").innerText = data;
+
+            //creation of increment function
+            function increment() {
+                data = data + 1;
+                document.getElementById("counting").innerText = data;
+            }
+            //creation of decrement function
+            function decrement() {
+                data = data - 1;
+                document.getElementById("counting").innerText = data;
+            }
+        </script>
+
+        <script>
+            //initialising a variable name data
+            var prod2 = 0;
+
+            //printing default value of data that is 0 in h2 tag
+            document.getElementById("counting2").innerText = prod2;
+
+            //creation of increment function
+            function increment2() {
+                prod2 = prod2 + 1;
+                document.getElementById("counting2").innerText = prod2;
+            }
+            //creation of decrement function
+            function decrement2() {
+                prod2 = prod2 - 1;
+                document.getElementById("counting2").innerText = prod2;
+            }
+        </script>
+
         <p>Total: R$ 25,00</p>
-        <button>Finalizar Compra</button>
+        <button id="finalizar">Finalizar Compra</button>
+
+
     </main>
     <footer>
         &copy; 2023 Minha Loja Virtual
@@ -33,4 +94,5 @@
 
     <a href="../Principal/principal.html" class="home-button">Home</a>
 </body>
+
 </html>

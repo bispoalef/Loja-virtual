@@ -5,6 +5,85 @@ body {
     background-color: #f4f4f4;
 }
 
+.cart_bar{
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 1px 0 rgb(0, 0, 0, .05);
+    overflow: hidden;
+    border-radius: 3px;
+    height: 55px;
+    font-size: 14px;
+    background: #fff;
+    margin-bottom: 12px;
+    color:#888;
+    padding: 0 20px; 
+}
+
+.cart_prod{
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 1px 0 rgb(0, 0, 0, .05);
+    overflow: hidden;
+    border-radius: 3px;
+    height: 200px;
+    font-size: 14px;
+    background: #fff;
+    margin-bottom: 12px;
+    color:#888;
+    padding: 0 20px; 
+}
+
+.img{
+    color:rgba(0, 0, 0, .8);
+    width: 46.27%;
+    display: block;
+    text-align: center;
+}
+.prod1{
+    color:rgba(0, 0, 0, .8);
+    width: 46.27%;
+    display: block;
+    text-align: center;
+}
+.descr1{
+    color:rgba(0, 0, 0, .8);
+    width: 46.27%;
+    display: block;
+    text-align: center;
+}
+.preço1{
+    color:rgba(0, 0, 0, .8);
+    width: 46.27%;
+    display: block;
+    text-align: center;
+}
+
+.produtos{
+    color:rgba(0, 0, 0, .8);
+    width: 46.27%;
+    display: block;
+    text-align: center;
+}
+.preçoUnitario{
+    color:rgba(0, 0, 0, .8);
+    width: 46.27%;
+    display: block;
+    text-align: center;
+}
+.quantidade{
+    color:rgba(0, 0, 0, .8);
+    width: 46.27%;
+    display: block;
+    text-align: center;
+}
+.preçoTotal{
+    color:rgba(0, 0, 0, .8);
+    width: 46.27%;
+    display: block;
+    text-align: center;
+}
+
+
 header {
     background-color: #333;
     color: #fff;
@@ -76,4 +155,20 @@ footer {
     border-radius: 5px;
     font-weight: bold;
     margin-top: 20px;
+}
+
+button {
+    width: 20px;
+    height: 30px;
+    font-size: 15px;
+    background-color: orange;
+    color: honeydew;
+}
+
+#finalizar{
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    background-color: orange;
+    color: honeydew;
 }
