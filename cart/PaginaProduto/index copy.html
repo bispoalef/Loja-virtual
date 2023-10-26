@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto 1</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .btn-sign-in {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-sign-up {
+            background-color: #28A745;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-sign-in:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-sign-up:hover {
+            background-color: #1E862B;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-success text-white text-center p-1">
+        <p class="m-0">Toda loja em 12x e <strong>FRETE GRÁTIS</strong></p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/Loja-virtual/cart/Principal/principal.html"><strong>Anime Store</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Principal/principal.html">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Carrinho/carrinho.html">Carrinho</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Sobre/sobre.html">Sobre</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sign-in">
+                            <button class="btn btn-sign-in">Sign In</button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sign-up">
+                            <button class="btn btn-sign-up bg-success">Sign Up</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container-product">
+            
+            <img class="product-image" src="https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91vRaLF252L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX425_.png" alt="Imagem do produto">
+            <div class="product-info">
+                <form action="" method="post">
+                    
+                    <h2>Produto 1</h2>
+                    <p>Selecione o Tamanho</p>
+                    <input type="radio" name="size" id="p">
+                    <label for="size">P</label>
+                    <input type="radio" name="size" id="m" checked>
+                    <label for="size">M</label>
+                    <input type="radio" name="size" id="g">
+                    <label for="size">G</label>
+    
+                    <p>Preço: R$ 10,00</p>
+                    <button>Adicionar ao Carrinho</button>
+                </form>
+            </div>
+            
+        </div>
+        <div class="product-description">
+            <h3>Descrição do Produto</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis numquam soluta reprehenderit dolores, similique animi ea laudantium esse eveniet perspiciatis, natus tenetur doloribus distinctio hic libero placeat qui. Perferendis!</p>
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        &copy; 2023 Minha Loja Virtual
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

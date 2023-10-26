@@ -59,8 +59,6 @@ main p {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
     padding: 10px 0;
 }
@@ -99,3 +97,17 @@ nav.navbar {
     justify-content: center; 
 }
 
+@media (max-width: 576px) {
+    .navbar-nav {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .navbar-nav .nav-item {
+      margin-bottom: 10px;
+    }
+  
+    .navbar-nav .nav-item a {
+      font-size: 1.2rem;
+    }
+  }
