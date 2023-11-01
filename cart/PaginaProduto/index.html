@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do Produto 1</title>
+    <title>Produto 1</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo à Minha Loja Virtual</h1>
+    <header class="bg-success text-white text-center p-1">
+        <p class="m-0">Toda loja em 12x e <strong>FRETE GRÁTIS</strong></p>
     </header>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="../Principal/principal.html">Página Inicial</a></li>
-            <li><a href="../Carrinho/carrinho.html">Carrinho</a></li>
-            <li><a href="../Sobre/sobre.html">Sobre</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/Loja-virtual/cart/Principal/principal.html"><strong>Anime Store</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Principal/principal.html">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Carrinho/carrinho.html">Carrinho</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Sobre/sobre.html">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <main>
@@ -25,29 +39,55 @@
             
             <img class="product-image" src="https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91vRaLF252L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX425_.png" alt="Imagem do produto">
             <div class="product-info">
-                <h2>Produto 1</h2>
-                <p>Selecione o Tamanho</p>
-                <input type="radio" name="size" id="p">
-                <label for="size">P</label>
-                <input type="radio" name="size" id="m" checked>
-                <label for="size">M</label>
-                <input type="radio" name="size" id="g">
-                <label for="size">G</label>
-
-                <p>Preço: R$ 10,00</p>
-                <button>Adicionar ao Carrinho</button>
+                <form action="" method="post">
+                    
+                    <h2>Produto 1</h2>
+                    <p>Selecione o Tamanho</p>
+                    <input type="radio" name="size" id="p">
+                    <label for="size">P</label>
+                    <input type="radio" name="size" id="m" checked>
+                    <label for="size">M</label>
+                    <input type="radio" name="size" id="g">
+                    <label for="size">G</label>
+    
+                    <p>Preço: R$ 10,00</p>
+                    <button>Comprar Agora</button>
+                </form>
             </div>
             
         </div>
         <div class="product-description">
-            <h3>Descrição do Produto</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis numquam soluta reprehenderit dolores, similique animi ea laudantium esse eveniet perspiciatis, natus tenetur doloribus distinctio hic libero placeat qui. Perferendis!</p>
-        </div>
+            <h3>🦖 Liberte o Dinossauro Interior! 🦖</h3>
 
+            <p>Você já se imaginou caminhando pela rua com a força feroz de um dinossauro? Agora, você pode! Apresentamos a nossa camisa com estampa de dinossauro, a peça de vestuário que vai despertar o aventureiro que há em você.</p>
+
+            <h3> 🌟 Por que escolher nossa camisa de dinossauro? 🌟</h3>
+
+            <p>✅ <strong>Design Incrível</strong>: A estampa de dinossauro é ousada, vibrante e vai chamar a atenção onde quer que você vá. Mostre sua personalidade única com este design exclusivo.</p>
+
+            <p>✅ <strong>Conforto Premium</strong>: Feita com tecido de alta qualidade, nossa camisa proporciona conforto incomparável. Ela é perfeita para uso diário, encontros casuais e aventuras ao ar livre.</p>
+
+            <p>✅ <strong>Tamanhos Variados</strong>: Disponível nos tamanhos P, M e G, nossa camisa é adequada para todos os corpos. Não importa o seu tamanho, você pode ter estilo e conforto.</p>
+
+            <p>✅ <strong>Durabilidade Garantida</strong>: Esta camisa é construída para resistir ao teste do tempo. Você poderá usá-la por muitos anos, mantendo seu visual impressionante.</p>
+
+            <p>✅ <strong>Presente Perfeito</strong>: Procurando um presente memorável para um amigo ou ente querido? Nossa camisa de dinossauro é uma escolha única e apreciada.</p>
+
+            <p>Não perca a oportunidade de adicionar um toque selvagem ao seu guarda-roupa. Seja destemido, seja ousado, seja você mesmo com nossa camisa de dinossauro.</p>
+
+            <h3>💥 Encomende a Sua Agora! 💥</h3>
+
+            <p>Junte-se à tribo dos amantes de dinossauros e faça uma declaração de estilo. Seja rápido, pois o estoque é limitado e a procura é alta.</p>
+
+            <p>Escolha o tamanho que se adapta ao seu estilo e prepare-se para dominar as ruas com a força de um dinossauro. Faça a sua encomenda hoje mesmo e comece a surpreender o mundo!</p>
+
+            <p>👉 Clique no botão <strong>Comprar Agora</strong> e faça parte da revolução dos dinossauros! 👈</p>
+
+            </div>
     </main>
-
-    <footer>
+    <footer class="bg-dark text-white text-center py-3">
         &copy; 2023 Minha Loja Virtual
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
