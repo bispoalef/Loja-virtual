@@ -2,45 +2,57 @@
     {
         "id": 1,
         "name": "Produto 1",
+        "descriptionTitle": "Descrição do Produto 1",
         "description": "Descrição do Produto 1",
         "price": 10.00,
-        "image": "../assets/camisa.webp"
+        "image": "../assets/keychain.jpeg",
+        "size": "M"
     },
     {
         "id": 2,
         "name": "Produto 2",
+        "descriptionTitle": "Descrição do Produto 2",
         "description": "Descrição do Produto 2",
         "price": 15.00,
-        "image": "../assets/popfunco.webp"
+        "image": "../assets/tennis.jpeg",
+        "size": "M"
     },
     {
         "id": 3,
         "name": "Produto 3",
+        "descriptionTitle": "Descrição do Produto 3",
         "description": "Descrição do Produto 3",
         "price": 20.00,
-        "image": "../assets/colar.jpg"
+        "image": "../assets/coat.jpeg",
+        "size": "M"
     },
     {
         "id": 4,
         "name": "Produto 4",
+        "descriptionTitle": "Descrição do Produto 4",
         "description": "Descrição do Produto 4",
         "price": 30.00,
-        "image": "../assets/akumanomi.webp"
+        "image": "../assets/picachu.jpeg",
+        "size": "M"
     }
     ,
     {
         "id": 5,
         "name": "Produto 5",
+        "descriptionTitle": "Descrição do Produto 5",
         "description": "Descrição do Produto 5",
         "price": 40.50,
-        "image": "../assets/poster.webp"
+        "image": "../assets/doll.jpeg",
+        "size": "M"
     }
     ,
     {
         "id": 6,
         "name": "Produto 6",
+        "descriptionTitle": "Descrição do Produto 6",
         "description": "Descrição do Produto 6",
         "price": 55.00,
-        "image": "../assets/tenis.webp"
+        "image": "../assets/akumanomi.jpeg",
+        "size": "G"
     }
 ]
