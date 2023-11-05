@@ -1,4 +1,3 @@
-/* Estilos para o corpo da página */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +5,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Estilos para o cabeçalho */
 header {
     background-color: #333;
     color: #fff;
@@ -14,7 +12,6 @@ header {
     text-align: center;
 }
 
-/* Estilos para a barra de navegação */
 nav {
     background-color: #444;
     padding: 10px 0;
@@ -46,17 +43,15 @@ nav ul li a:hover {
     color: #ff9900;
 }
 
-/* Estilos para a seção principal */
 main {
     padding: 20px;
 }
 
-/* Estilos para o carrossel */
 #carousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    white-space: nowrap; /* Impede a quebra de linha dentro do carrossel */
+    white-space: nowrap;
 }
 
 .carousel-item {
@@ -67,7 +62,7 @@ main {
     text-align: center;
     background-color: #fff;
     border: 1px solid #ddd;
-    scroll-snap-align: start; /* Alinha cada item do carrossel ao início */
+    scroll-snap-align: start;
 }
 
 .carousel-item img {
@@ -88,7 +83,6 @@ main {
     background-color: #ddd;
 }
 
-/* Estilos para a lista de produtos */
 #product-list {
     list-style: none;
     padding: 0;
