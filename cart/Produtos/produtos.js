@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <h3>${product.name}</h3>
                     <p>${product.description}</p>
                     <p>Preço: R$ ${product.price.toFixed(2)}</p>
-                    <a href="../PaginaProduto/index copy.html">Detalhes</a>
+                    <a href="../PaginaProduto/index.html">Detalhes</a>
                 `;
                 carousel.appendChild(carouselItem);
             });
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <h2>${product.name}</h2>
                     <p>${product.description}</p>
                     <p>Preço: R$ ${product.price.toFixed(2)}</p>
-                    <a href="../PaginaProduto/index copy.html">Detalhes</a>
+                    <a href="../PaginaProduto/index.html">Detalhes</a>
                 `;
                 productList.appendChild(listItem);
             });
