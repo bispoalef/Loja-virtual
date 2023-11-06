@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
             data.forEach((product, index) => {
                 const carouselItem = document.createElement("div");
                 carouselItem.classList.add("carousel-item");
-                if (index === 1) {
+                if (index === 0) {
                     carouselItem.classList.add("active");
                 }
             
