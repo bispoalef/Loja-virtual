@@ -36,8 +36,7 @@
     </nav>
 
     <main>
-        <h5>Insira o cpf para validar a compra:</h5>
-        <input type="text" autocomplete="off" id="cpf" name="cpf" maxlength="14">
+       
         <div id="produtoSelecionado"></div>
     </main>
 
@@ -61,7 +60,7 @@
                         <img class="product-image" src="${product.image}" alt="${product.name}">
                         <div class="product-info">
                             <form action="processar-dados.php" method="post">
-                                <h2>${product.name}</h2>
+                                <h2">${product.name}</h2>
                                 <h5>Selecione a variação</h5>
                                 <input type="radio" name="variacao" value="p" ${product.size === 'P' ? 'checked' : ''}>
                                 <label for="size">P</label>
@@ -71,6 +70,8 @@
                                 <label for="size">G</label>
                                 <h5>Preço:</h5>
                                 <p>R$${product.price.toFixed(2)}</p>
+                                <h5>Insira o cpf para validar a compra:</h5>
+                                <input type="text" autocomplete="off" id="cpf" name="cpf" maxlength="14">
                                 <button type="submit">Comprar</button>
                             </form>
                         </div>
@@ -87,6 +88,7 @@
                 console.error('Erro ao buscar e exibir o produto JSON:', error);
             });
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
