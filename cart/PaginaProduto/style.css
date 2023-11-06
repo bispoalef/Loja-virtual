@@ -88,7 +88,8 @@ footer {
 }
 
 .product-image{
-    width: 50vh;
+    width: 60vh;
+    border-radius: 50%;
 }
 
 nav.navbar {
@@ -110,4 +111,6 @@ nav.navbar {
     .navbar-nav .nav-item a {
       font-size: 1.2rem;
     }
+
+ 
   }

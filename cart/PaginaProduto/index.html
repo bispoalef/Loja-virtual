@@ -39,7 +39,6 @@
         <h5>Insira o cpf para validar a compra:</h5>
         <input type="text" autocomplete="off" id="cpf" name="cpf" maxlength="14">
         <div id="produtoSelecionado"></div>
-
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
@@ -58,36 +57,28 @@
                 const product = data.find(product => product.id == produtoID);
                 if (product) {
                     produtoSelecionado.innerHTML = `
-                            
-                            <div class="container-product">
-            
-            <img class="product-image" src="${product.image}" alt="${product.name}">
-            <div class="product-info">
-                <form action="processar-dados.php" method="post">
-                    <h2>${product.name}</h2>
-
-                    <h5>Selecione a variação</h5>
-                <input type="radio" name="variacao" value="p" ${product.size === 'P' ? 'checked' : ''}>
-                <label for="size">P</label>
-                <input type="radio" name="variacao" value="m" ${product.size === 'M' ? 'checked' : ''}>
-                <label for="size">M</label>
-                <input type="radio" name="variacao" value="g" ${product.size === 'G' ? 'checked' : ''}>
-                <label for="size">G</label>
-                    
-                 
-                    <h5>Preço:</h5>
-                    <p>R$${product.price.toFixed(2)}</p>
-                    <button type="submit">Comprar</button>
-                </form>
-            </div>
-        </div>
-        <div class="product-description">
-            <h3>${product.descriptionTitle}</h3>
-
-            <p>${product.description}</p>
-
-            </div>
-                        `;
+                    <div class="container-product">
+                        <img class="product-image" src="${product.image}" alt="${product.name}">
+                        <div class="product-info">
+                            <form action="processar-dados.php" method="post">
+                                <h2>${product.name}</h2>
+                                <h5>Selecione a variação</h5>
+                                <input type="radio" name="variacao" value="p" ${product.size === 'P' ? 'checked' : ''}>
+                                <label for="size">P</label>
+                                <input type="radio" name="variacao" value="m" ${product.size === 'M' ? 'checked' : ''}>
+                                <label for="size">M</label>
+                                <input type="radio" name="variacao" value="g" ${product.size === 'G' ? 'checked' : ''}>
+                                <label for="size">G</label>
+                                <h5>Preço:</h5>
+                                <p>R$${product.price.toFixed(2)}</p>
+                                <button type="submit">Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="product-description">
+                        <h3>${product.descriptionTitle}</h3>
+                        <p>${product.description}</p>
+                    </div>`;
                 } else {
                     produtoSelecionado.innerHTML = 'Produto não encontrado.';
                 }
