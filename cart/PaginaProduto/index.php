@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+$protocolo = (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS']=="on") ? "https" : "http");
+$url = '://'.$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'].'?'.$_SERVER['QUERY_STRING'];
+
+$_SESSION['urlcompl'] = $protocolo.$url;
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
