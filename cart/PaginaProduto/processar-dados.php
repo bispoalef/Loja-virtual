@@ -1,26 +1,13 @@
 <?php
-session_start();
-$url = $_SESSION['urlcompl'];
+$cpf = $_POST['cpf'];
 
-$dom = new domDocument;
-libxml_use_internal_errors(true);
-$dom->loadHTML($url);
-$XPath = new DomXPath($dom);
-$tag_produto = $XPath->query('/html/body/main/div[1]/div/form/h2');
-$tag_preco =  $XPath->query('/html/body/main/div[1]/div/form/p');
-
-if($tag_produto->length > 0) {
-  $node = $tag_produto->item(0);
-  $produto = $node->nodeValue;
-} 
-
-if($tag_preco->length > 0) {
-  $node = $tag_preco->item(0);
-  $preco = $node->nodeValue;
+if($cpf == null){
+  $cpf = null;
 }
 
-$cpf = $_POST['cpf'];
+$produto = $_POST['produto'];
 $variacao = $_POST['variacao'];
+$preco = $_POST['preco'];
 $data_atual = date('d/m/Y');
 
 $server = 'localhost';
@@ -35,7 +22,7 @@ if($conn -> connect_error){
 }
 
 $smtp = $conn -> prepare("INSERT INTO vendas (cpf, nome_produto, variacao,preco, data) VALUES (?,?,?,?,?)");
-$smtp->bind_param("sssss", $cpf, $produto, $variacao, $preco, $data_atual);
+$smtp->bind_param("issss", $cpf, $produto, $variacao, $preco, $data_atual);
 
 if($smtp->execute()){
   echo "Dados salvos no banco!";
