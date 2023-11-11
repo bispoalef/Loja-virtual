@@ -9,7 +9,7 @@
                 <?php
                 session_start();
                 include_once('conexao.php');
-                $sql = "SELECT * FROM products ORDER BY id DESC";
+                $sql = "SELECT * FROM products ORDER BY id ASC";
                 $result = $connection->query($sql);
                 $firstItem = true;
 

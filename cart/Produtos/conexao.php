@@ -10,9 +10,4 @@
      {
          echo "Erro";
      }
-     else
-     {
-         echo "Conexão com banco de dados efetuada com sucesso";
-     }
-
 ?>
