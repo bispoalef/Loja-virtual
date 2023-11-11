@@ -18,18 +18,23 @@ $banco = 'bd_loja';
 $conn = new mysqli($server, $usuario, $senha, $banco);
 
 if($conn -> connect_error){
-  echo "Error:" .$conn ->connect_error;
+  $mensagem = "Error:" .$conn ->connect_error;
 }
 
 $smtp = $conn -> prepare("INSERT INTO vendas (cpf, nome_produto, variacao,preco, data) VALUES (?,?,?,?,?)");
 $smtp->bind_param("issss", $cpf, $produto, $variacao, $preco, $data_atual);
 
 if($smtp->execute()){
-  echo "Dados salvos no banco!";
+  $mensagem = "Dados salvos no banco!";
 }else{
-  echo "Erro ".$smtp->error;
+  $mensagem = "Erro ".$smtp->error;
 }
 
+
+echo '<script type="text/javascript">';
+echo 'alert("' . $mensagem . '");';
+echo 'window.location.href = "../Principal/principal.php";';
+echo '</script>';
 $smtp->close();
 $conn->close();
 
