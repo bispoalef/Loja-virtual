@@ -107,7 +107,7 @@
         ?>
     </main>
 
- <footer>
+    <footer>
         &copy; <?php echo date("Y"); ?> Minha Loja Virtual  -  <a class="nav-link" href="../sobre/suporte.html">suporte</a>
 
     </footer>
