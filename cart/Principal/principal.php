@@ -45,7 +45,8 @@
 
     </main>
     <footer>
-        &copy; <?php echo date("Y"); ?> Minha Loja Virtual
+        &copy; <?php echo date("Y"); ?> Minha Loja Virtual  -  <a class="nav-link" href="../sobre/suporte.html">suporte</a>
+
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
