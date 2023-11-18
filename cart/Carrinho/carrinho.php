@@ -84,6 +84,13 @@
                 h2Element.innerText = value;
                 updateTotal(preco, change);
             }
+            if (value <= 0) {
+
+                javascript:alert('Deseja excluir esse produto?');
+
+
+                
+            }
         }
 
         function updateTotal(preco, change) {
@@ -99,7 +106,6 @@
         }
         ?>
     </main>
-
 
     <footer>
         &copy; 2023 Anime Store
