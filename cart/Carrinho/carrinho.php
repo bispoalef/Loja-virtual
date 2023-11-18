@@ -102,7 +102,7 @@
 
 
     <footer>
-        &copy; 2023 Minha Loja Virtual
+        &copy; 2023 Anime Store
     </footer>
 </body>
 

@@ -101,9 +101,10 @@
     echo $produtoSelecionado;
     ?>
 
-</body>
 <footer class="bg-dark text-white text-center py-3">
-    &copy; 2023 Minha Loja Virtual
+    &copy; 2023 Anime Store
 </footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 
 </html>

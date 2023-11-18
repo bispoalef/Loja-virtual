@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Loja Virtual</title>
+    <title>Anime Store</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Bem-vindo à Minha Loja Virtual</h1>
+        <h1>Bem-vindo à Anime Store</h1>
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -26,6 +26,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../Sobre/sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Rastreamento/rastreamento.php">Rastreamento</a>
                     </li>
                 </ul>
             </div>
@@ -45,7 +48,7 @@
 
     </main>
     <footer>
-        &copy; <?php echo date("Y"); ?> Minha Loja Virtual
+        &copy; <?php echo date("Y"); ?> Anime Store
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
