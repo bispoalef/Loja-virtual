@@ -48,7 +48,7 @@
 
     </main>
     <footer>
-        &copy; <?php echo date("Y"); ?> Anime Store
+        &copy; <?php echo date("Y"); ?> Anime Store <a href="../suporte/suporte.html">Suporte</a>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
