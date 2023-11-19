@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja Virtual - Suporte</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .support-section {
+            background-color: #FFA500; 
+            color: #fff; 
+            padding: 20px;
+            margin: 20px 0; 
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #0077b6;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        label {
+            display: block; 
+            margin-top: 10px; 
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        textarea {
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Suporte</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../Principal/principal.php"><strong>Anime Store</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Carrinho/carrinho.php">Carrinho</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Sobre/sobre.html">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+    <div class="section-div support-section">
+        <h2>Entre em Contato Conosco</h2>
+        <p>
+            Por favor, descreva seu problema ou dúvida abaixo e entraremos em contato o mais rápido possível.
+        </p>
+        <form action="process.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="descricao">Descreva seu problema:</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="error-message"></div>
+    </div>
+    <hr>
+
+    <?php include 'listar.php'; ?>
+
+    <footer>
+        &copy; 2023 Minha Loja Virtual - <a href="suporte.html">Suporte</a>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../Produtos/produtos.js"></script>
+    <script>
+        document.getElementById('support-form').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const problem = document.getElementById('problem').value;
+
+            if (!name || !email || !problem) {
+                document.getElementById('error-message').innerText = "Por favor, preencha todos os campos.";
+            } else {
+                alert("Dados enviados com sucesso!");
+                document.getElementById('error-message').innerText = ""; 
+                document.getElementById('support-form').reset(); 
+            }
+        });
+    </script>
+</body>
+</html>
