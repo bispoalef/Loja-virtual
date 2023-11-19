@@ -111,7 +111,7 @@
     </main>
 
     <footer>
-        &copy; 2023 Anime Store
+        &copy; 2023 Anime Store <a href="../suporte/suporte.html">Suporte</a>
     </footer>
 </body>
 
