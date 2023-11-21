@@ -53,19 +53,20 @@
             $sql = "SELECT * FROM vendas ORDER BY id ASC";
             $result = $connection->query($sql);
             $total = 0;
-            
+
             while ($row = $result->fetch_assoc()) {
                 $preco = $row['preco'];
+                $productId = $row['id'];
                 $total += $preco;
             ?>
-            <div class="cart_prod">
+            <div class="cart_prod" id="product<?= $productId ?>">
                 <img src="<?= $row['imagem'] ?>" alt="<?= $row['nome_produto'] ?>" style="border-radius: 50%;"
                     class="d-block max-width-100 max-height-100">
                 <div class="prod1"><?= $row['nome_produto'] ?></div>
                 <div class="descr1">
                     <h2>1</h2>
-                    <button onclick="updateValue(this, -1, <?= $preco ?>)">-</button>
-                    <button onclick="updateValue(this, 1, <?= $preco ?>)">+</button>
+                    <button onclick="updateValue(this, -1, <?= $preco ?>, <?= $productId ?>)">-</button>
+                    <button onclick="updateValue(this, 1, <?= $preco ?>, <?= $productId ?>)">+</button>
                 </div>
                 <div class="preco">R$ <?= number_format($preco, 2) ?></div>
             </div>
@@ -79,7 +80,7 @@
         </form>
 
         <script>
-        function updateValue(button, change, preco) {
+        function updateValue(button, change, preco, productId) {
             var h2Element = button.parentElement.querySelector("h2");
             var value = parseInt(h2Element.innerText);
             value += change;
@@ -88,22 +89,52 @@
                 updateTotal(preco, change);
             }
             if (value <= 0) {
-
-                javascript:alert('Deseja excluir esse produto?');
-
-
-                
+                var confirmDelete = confirm('Deseja excluir esse produto?');
+                if (confirmDelete) {
+                    removeProduct(productId);
+                    document.getElementById("product-list").removeChild(document.getElementById("product" + productId));
+                    updateTotal(preco, -1);
+                } else {
+                    h2Element.innerText = "1";
+                    updateTotal(preco, 1 * value);
+                }
             }
         }
+
+        function removeProduct(productId) {
+    var form = document.createElement('form');
+    form.method = 'post';
+    form.action = '';
+
+    var input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'removeProduct';
+    input.value = productId;
+    form.appendChild(input);
+
+    document.body.appendChild(form);
+    form.submit();
+}
 
         function updateTotal(preco, change) {
             var totalElement = document.getElementById("total");
             var total = parseFloat(totalElement.innerText.replace("R$ ", ""));
             total += preco * change;
-            totalElement.innerText = "R$ " + total.toFixed(2);
+            totalElement.innerText = total.toFixed(2);
         }
         </script>
+
         <?php
+        
+        if (isset($_POST['removeProduct'])) {
+            $productIdToRemove = $_POST['removeProduct'];
+            
+            $removeProductSql = "DELETE FROM vendas WHERE id = $productIdToRemove";
+            $connection->query($removeProductSql);
+            
+            header("Location: ".$_SERVER['PHP_SELF']);
+            exit();
+        }
         if (isset($_POST['finalizar'])) {
             // Coloque aqui o código para finalizar a compra
         }
