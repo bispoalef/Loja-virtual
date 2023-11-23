@@ -41,7 +41,7 @@
     <main>
         <div class="cart_bar">
             <div class="produtos">Produtos</div>
-            <div class="preçoUnitario">Preço Unitário</div>
+            <div class="preçoUnitario">Descrição</div>
             <div class="quantidade">Quantidade</div>
             <div class="preçoTotal">Preço</div>
         </div>
@@ -50,6 +50,7 @@
             <?php
             session_start();
             include_once('../Produtos/conexao.php');
+            
             $sql = "SELECT * FROM vendas ORDER BY id ASC";
             $result = $connection->query($sql);
             $total = 0;
@@ -68,7 +69,7 @@
                     <button onclick="updateValue(this, -1, <?= $preco ?>, <?= $productId ?>)">-</button>
                     <button onclick="updateValue(this, 1, <?= $preco ?>, <?= $productId ?>)">+</button>
                 </div>
-                <div class="preco">R$ <?= number_format($preco, 2) ?></div>
+                <div class="preco" id="preco<?= $productId ?>">R$ <?= number_format($preco, 2) ?></div>
             </div>
             <?php
             }
@@ -84,8 +85,12 @@
             var h2Element = button.parentElement.querySelector("h2");
             var value = parseInt(h2Element.innerText);
             value += change;
+
             if (value >= 1) {
                 h2Element.innerText = value;
+
+                var precoAlterado = preco * value;
+                updatePreco(precoAlterado, productId);
                 updateTotal(preco, change);
             }
             if (value <= 0) {
@@ -101,20 +106,26 @@
             }
         }
 
+        function updatePreco(precoAlterado, productId){
+            var precoElement = document.getElementById("preco" + productId);
+            precoElement.innerText = "R$ " +precoAlterado.toFixed(2);
+
+        }
+
         function removeProduct(productId) {
-    var form = document.createElement('form');
-    form.method = 'post';
-    form.action = '';
+            var form = document.createElement('form');
+            form.method = 'post';
+            form.action = '';
 
-    var input = document.createElement('input');
-    input.type = 'hidden';
-    input.name = 'removeProduct';
-    input.value = productId;
-    form.appendChild(input);
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'removeProduct';
+            input.value = productId;
+            form.appendChild(input);
 
-    document.body.appendChild(form);
-    form.submit();
-}
+            document.body.appendChild(form);
+            form.submit();
+        }
 
         function updateTotal(preco, change) {
             var totalElement = document.getElementById("total");
@@ -136,8 +147,9 @@
             exit();
         }
         if (isset($_POST['finalizar'])) {
-            // Coloque aqui o código para finalizar a compra
-        }
+            
+            }
+        
         ?>
     </main>
 
